@@ -1,0 +1,54 @@
+<style>
+.formContainer {
+  height:   100%   ;
+  position: relative;
+}
+.center {
+  margin:     0                       ;
+  position:   absolute                ;
+  top:        50%                     ;
+  left:       50%                     ;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)    ;
+  }
+form {  margin:   auto		   ;
+		width:    600px        ;
+		border:   1px solid red;
+		padding:  20px         ;
+	 } 
+</style>	 
+
+<div class="formContainer">	
+<div class="center">
+<form action = "register.php" >
+
+  Register for Account:<br><br>
+  <input type = text name= "name">name (First Last)<br><br>
+  <input type = text name= "ucid">ucid (max 5 characters)<br><br>
+  <input type = text name= "cell">cell number (xxx-xxx-xxxx)<br><br>
+  <input type = text id="pass" name= "pass">pass
+  <input type="checkbox" id="show" name="showPass">Click to hide password/unclick to see<br><br>
+  <br><br>Security Questions<br><br>
+  <input type = text name= "pet">Name of first pet?<br><br>
+  <input type = text name= "born">Name of town born in?<br><br>
+  <input type = text name= "tree">Name of favorite tree?<br><br>
+  <input type =submit><br>
+
+
+</form>
+</div>
+</div>
+
+<script>
+	var ptrCheck = document.getElementById("show")
+	var ptrPass = document.getElementById("pass")
+	
+	ptrCheck.addEventListener("click", F)
+	function F() {
+	if(ptrCheck.checked){
+		ptrPass.type = "password"
+	}
+	else
+		ptrPass.type = "text"
+	}
+</script>
